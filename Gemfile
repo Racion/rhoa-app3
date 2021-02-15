@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 #Devise install
 gem 'devise'
+# Add font-awesome for icons
+gem 'font-awesome-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
