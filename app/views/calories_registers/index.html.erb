@@ -1,4 +1,5 @@
 <h1>Your Calories Registers</h1>
+<%= render 'formdate' %>
 <table class="table">
   <thead>
     <tr>
@@ -16,7 +17,14 @@
         <td><%= register.quantity %></td>
         <td><%= register.activityType %></td>
         <td><%= register.date %></td>
-        <td>Edit Delete</td>
+        <td>
+          <%= link_to edit_calories_register_path(register.id), class: 'button is-success is-small' do %>
+            <i class="fas fa-indent"></i>
+          <% end %>
+          <%= link_to register, method: :delete, data: {confirm: 'Are you sure?'}, class: 'button is-danger is-small' do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

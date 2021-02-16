@@ -1,0 +1,16 @@
+<div class="container">
+  <%= form_with(model: @calories_register) do |f| %>
+    <div class="field">
+      <%= f.label :start_date %>
+      <%= f.date_select :start_date, class: 'input' %>
+    </div>
+    <div class="field">
+      <%= f.label :end_date %>
+      <%= f.date_select :end_date, class: 'input' %>
+    </div>
+
+    <div class="action">
+      <%= f.submit 'Search', class: 'button is-dark' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<% if @calories_register.errors.any? %>
+  <div id="error_explanation">
+    <div class="notification is-danger is-light">
+      The form contains <%= pluralize(@calories_register.errors.count, 'error') %>
+    </div>
+    <ul>
+      <%= @calories_register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

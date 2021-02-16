@@ -12,13 +12,11 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
-      <div class="container errors-container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </div>
-      <div class="container">
-        <%= yield %>
-      </div>
+      <p class="notice"><%= notice %></p>
+      <% flash.each do |message_type, message| %>
+        <%= content_tag :div, message, class: "notification is-#{message_type} is-light" %>
+      <% end %>
+      <%= yield %>
     </div>
   </body>
 </html>

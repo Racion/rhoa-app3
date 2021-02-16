@@ -1,4 +1,5 @@
 <%= form_with(model: @calories_register) do |f|%>
+  <%= render 'calories_registers/shared/error_messages' %>
   <div class="field">
     <%= f.label :description, class: 'label' %>
     <%= f.text_area :description, class: 'input', required: true, placeholder: 'Description...' %>
