@@ -35,6 +35,10 @@ gem 'font-awesome-sass'
 
 # Add kaminari for pagination
 gem 'kaminari'
+# datepicker is not working
+# Datepicker from bootstrap
+# gem 'bootstrap-datepicker-rails'
+# gem 'bootstrap'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

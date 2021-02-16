@@ -10,12 +10,13 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data_turbolinks-track': 'reload' %>
   </head>
   <body>
+    <%= render 'layouts/header' %>
     <div class="container">
       <div class="container errors-container">
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
       </div>
-      <div class="container content-container">
+      <div class="container">
         <%= yield %>
       </div>
     </div>

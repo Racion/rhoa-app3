@@ -1,0 +1,23 @@
+<h1>Your Calories Registers</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Calories Quantity</th>
+      <th>Activity Type</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @calories_registers.each do |register| %>
+      <tr>
+        <td><%= register.description %></td>
+        <td><%= register.quantity %></td>
+        <td><%= register.activityType %></td>
+        <td><%= register.date %></td>
+        <td>Edit Delete</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

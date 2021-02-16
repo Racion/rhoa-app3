@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_143830) do
+ActiveRecord::Schema.define(version: 2021_02_15_225036) do
+
+  create_table "calories_registers", force: :cascade do |t|
+    t.string "description", default: "", null: false
+    t.string "activityType", default: "", null: false
+    t.date "date", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantity", default: 0, null: false
+    t.index ["user_id"], name: "index_calories_registers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,4 +35,5 @@ ActiveRecord::Schema.define(version: 2021_02_15_143830) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "calories_registers", "users"
 end

@@ -1,0 +1,21 @@
+<%= form_with(model: @calories_register) do |f|%>
+  <div class="field">
+    <%= f.label :description, class: 'label' %>
+    <%= f.text_area :description, class: 'input', required: true, placeholder: 'Description...' %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity, class: 'label' %>
+    <%= f.number_field :quantity, class: 'input', required: true, placeholder: 'Calories Quantity' %>
+  </div>
+  <div class="field">
+    <%= f.label :activityType, class: 'label' %>
+    <%= f.select :activityType,[['Burned', 'burned'], ['Gained', 'gained']],{include_blank: 'Select type'},  {class: 'select is-normal'} %>
+  </div>
+  <div class="field">
+    <%= f.label :date, class: 'label' %>
+    <%= f.date_select :date, class: 'input', required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'button is-dark' %>
+  </div>
+<% end %>
