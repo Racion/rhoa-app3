@@ -3,5 +3,5 @@ class CaloriesRegister < ApplicationRecord
   validates :description, presence: true, length: { maximum: 140 }
   validates :date, presence: true
   validates :activityType, presence: true
-
+  validates :quantity, presence: true, numericality: {greater_than: 0}
 end

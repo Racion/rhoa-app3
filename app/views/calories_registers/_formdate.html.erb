@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_with(model: @calories_register) do |f| %>
+  <%= form_with(url: calories_registers_path, method: :get) do |f| %>
     <div class="field">
       <%= f.label :start_date %>
       <%= f.date_select :start_date, class: 'input' %>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="action">
-      <%= f.submit 'Search', class: 'button is-dark' %>
+      <%= f.submit 'Search', class: 'button is-dark is-small' %>
     </div>
   <% end %>
 </div>

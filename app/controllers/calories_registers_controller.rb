@@ -11,7 +11,10 @@ class CaloriesRegistersController < ApplicationController
   def show; end
 
   def index
-    @calories_registers = CaloriesRegister.where(user_id: current_user.id)
+    @calories_registers = current_user.calories_registers
+    if params[:commit] == 'Search'
+      @calories_registers = current_user.find_dates_between(params[:start_date], params[:end_date])
+    end
   end
 
   def create
