@@ -4,4 +4,5 @@ class CaloriesRegister < ApplicationRecord
   validates :date, presence: true
   validates :activityType, presence: true
   validates :quantity, presence: true, numericality: {greater_than: 0}
+  paginates_per 10
 end
