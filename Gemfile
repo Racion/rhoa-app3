@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 # Add font-awesome for icons
 gem 'font-awesome-sass'
+gem 'faker'
 
 # Add kaminari for pagination
 gem 'kaminari'
