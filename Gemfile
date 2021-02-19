@@ -40,6 +40,11 @@ gem 'kaminari'
 # Datepicker from bootstrap
 # gem 'bootstrap-datepicker-rails'
 # gem 'bootstrap'
+gem 'jquery-rails'
+gem 'rails-ujs'
+gem 'coffee-rails'
+gem 'morrisjs-rails'
+gem 'raphaeljs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
